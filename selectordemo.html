@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*1.  universal */
+        * {
+            text-align: center;
+        }
+
+        /*2.  element*/
+        div {
+            text-align: left;
+        }
+
+        /* 3.id*/
+        #a {
+            text-align: right;
+            color: red;
+        }
+
+        /* 4.class*/
+        .bluet {
+            color: blue;
+            background-color: aqua;
+        }
+
+        .greent {
+            color: green;
+            background-color: lightgreen;
+        }
+
+        .demo {
+            font-size: 50px;
+        }
+
+        div.greent {
+            font-size: 30px;
+            color: grey;
+        }
+
+        p.greet {
+            font-size: 100px;
+        }
+
+        div.bluet {
+            font-size: 40px;
+        }
+
+        /*combinator*/
+        /*5.child*/
+
+        div>p {
+            color: purple;
+            text-align: left;
+        }
+
+        /*6.descendent*/
+        div p {
+            color: silver;
+            text-align: right;
+        }
+
+        /*7.grouping*/
+        p,
+        div,
+        a,
+        article {
+            color: magenta;
+        }
+
+        /*8. Attribute*/
+        a[target] {
+            color: hotpink;
+            background-color: peachpuff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Types Of Selector</h1>
+    <div id="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est aspernatur optio eos illum molestiae
+        eveniet voluptatibus voluptates voluptatem deserunt!</div>
+    <div class="bluet demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est aspernatur optio eos illum
+        molestiae eveniet voluptatibus voluptates voluptatem deserunt!</div>
+    <div class="bluet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est aspernatur optio eos illum
+        molestiae eveniet voluptatibus voluptates voluptatem deserunt!</div>
+    <div class="greent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est aspernatur optio eos illum
+        molestiae eveniet voluptatibus voluptates voluptatem deserunt!</div>
+    <div class="greent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est aspernatur optio eos illum
+        molestiae eveniet voluptatibus voluptates voluptatem deserunt!</div>
+    <p class="greent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, autem!</p>
+    <p class="greent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, autem!</p>
+    <div>
+        <p>this is para 1</p>
+        <article>
+            <p>this is para 2</p>
+        </article>
+        <p>This is para3</p>
+    </div>
+    <a href="F2.html">link to file 1</a>
+    <a href="F2.html" target="_self">link to file 2</a>
+    <a href="F2.html" target="_blank">link to file 3</a>
+</body>
+
+</html>

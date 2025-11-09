@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul>li {
+            color: brown;
+            font-size: 20px;
+        }
+
+        ol>li {
+            color: orange;
+            font-size: 30px;
+        }
+
+        .ab {
+            background-color: pink;
+        }
+
+        .bc {
+            background-color: yellow;
+        }
+
+        [type=text] {
+            background-color: aquamarine;
+        }
+
+        [type=email] {
+            background-color: darkorange;
+        }
+
+        [type=button] {
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- use appropriate selectors to complete the following 
+    1.create a nested list as given. all the direct child li must have color brown and size 20px.all the nested li must have color orange and size 30px.
+    2.create a table with 3 rows odd row having bg color pink and  even rows having bg color yellow.
+    3.create a form with 1 textbox,1 email,and 2 buttons.use attribute selectors for different background color for each input type.-->
+
+    <ul>
+        <li>Apple</li>
+        <ol type="1.">
+            <li>Green</li>
+            <li>red</li>
+        </ol>
+    </ul>
+    <ul>
+        <li>Pineapple</li>
+    </ul>
+    <ul>
+        <li>Dragon Fruit</li>
+        <ol type="a">
+            <li>White</li>
+            <li>Red</li>
+        </ol>
+    </ul>
+
+
+    <table rules="all" border="3" height="50px" width="100px">
+        <tr class="ab">
+            <th>a</th>
+            <th>d</th>
+        </tr>
+        <tr class="bc">
+            <th>b</th>
+            <th>e</th>
+        </tr>
+        <tr class="ab">
+            <th>c</th>
+            <th>f</th>
+        </tr>
+    </table>
+    <br>
+
+    <form>
+        <label>First Name:
+            <input type="text" autofocus placeholder="Enetr your name" name="fn">
+        </label>
+        <br>
+        <br>
+        <lable>Email:
+            <input type="email" autofocus name="email" placeholder="Enter Mail">
+        </lable>
+        <br>
+        <br>
+        <label>
+            <input type="button" value="b1">
+        </label>
+
+        <label>
+            <input type="button" value="b2">
+        </label>
+
+    </form>
+</body>
+
+</html>

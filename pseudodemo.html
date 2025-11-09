@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: green;
+            background-color: pink;
+        }
+
+        a:visited {
+            color: black;
+            background-color: lime;
+        }
+
+        a:hover {
+            font-size: 40px;
+        }
+
+        a:active {
+            text-decoration: None;
+            color: gold;
+            background-color: black;
+        }
+
+        .d>p:nth-child(3) {
+            background-color: yellow;
+        }
+
+        div:not(.sp) {
+            color: red;
+            background-color: pink;
+
+        }
+
+        h1:hover {
+            color: deepskyblue;
+            background-color: aqua;
+            font-size: 30px;
+        }
+
+        input:focus {
+            background-color: yellow;
+            color: lightcoral;
+            font-size: 25px;
+        }
+
+        h1::before {
+            content: url(b1.jpg);
+            color: red;
+        }
+
+        h1::after {
+            content: "💀💀💀";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#1">
+        link1
+    </a><br><br>
+    <a href="##2">
+        link2
+    </a><br><br>
+    <a href="###3">
+        link3
+    </a><br><br>
+    <a href="####4" id="l">
+        link4
+    </a>
+    <div class="d">
+        <p>hello1</p>
+        <p>hello2</p>
+        <p>hello3</p>
+        <p>hello4</p>
+        <p>hello5</p>
+    </div>
+    <div class="sp">abc</div>
+    <div class="c">abc</div>
+    <div class="c">abc</div>
+    <h1>HELLO WORLD</h1>
+    <form>
+        <label>
+            <input type="text" placeholder="ENTER FIRST NAME:">
+        </label>
+    </form>
+
+</body>
+
+</html>
