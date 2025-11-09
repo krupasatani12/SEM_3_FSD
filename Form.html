@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="BasicTags.html">
+           <fieldset>
+                <legend>Registration</legend>
+                <label>
+                    First name : <input type="text" name = "fn" ID = "t1" placeholder="Enter your First name" autofocus required autocomplete minlength="4" maxlength="15">
+                </label>
+                <br><br>
+                <label>
+                    Last name : <input type = "text" name = "ln" value = "No name given">
+                </label>
+                <br><br>
+                <label>
+                    Password : <input type = "password" required>
+                </label>
+                <br><br>
+                <label>
+                    Email : <input type="email">
+                </label>
+                <br><br>
+                <label>
+                    Mobile no : <input type="tel">
+                </label>
+                <br><br>
+                <label>
+                    Age : <input type="number" min="15" max = "120" step = "5">
+                </label>
+                <br><br>
+                <label>
+                    DOB : <input type="date" max ="2005-01-01">
+                </label>
+                <br><br>
+                <label>
+                    TOB : <input type="time">
+                </label>
+                <br><br>
+                <label>
+                    Fav color : <input type="color" value = "#ab0023">
+                </label>
+                <br><br>
+                <label>
+                    Profile photo : <input type = "file" accept=".png,.jpg,.jpeg,.gif,.jfif" multiple>
+                </label>
+                <br><br>
+                <label>Gender :</label>
+                <label><input type="radio" name="g" value = "Male">Male</label>
+                <label><input type="radio" name="g" value = "Female">Female</label>
+                <label><input type="radio" name="g" checked value = "Other">Other</label>
+                <br><br>
+                <label>Hobbies : </label><br>
+                <label><input type="checkbox" name = "h" value = "Garba">Garba</label><br>
+                <label><input type="checkbox" name = "h" value = "Swimming">Swimming</label><br>
+                <label><input type="checkbox" name = "h" value = "Gaming">Gaming</label><br>
+                <label><input type="checkbox" name = "h" value = "Driving">Driving</label><br>
+                <label><input type="checkbox" name = "h" value = "Travelling">Travelling</label><br>
+                <!-- When we click on submit -->
+                <!-- http://127.0.0.1:5500/BasicTags.html?fn=Feel&ln=No+name+given&g=Male&h=Garba&h=Gaming&h=Driving&h=Travelling -->
+                <br><br>
+                <lable>Price range : 0 <input type="range" min=0 max = 10000 value = 2000> 10000</lable>
+                <br><br>
+                <select required>
+                    <option disabled hidden selected>-- SELECT CITY --</option>
+                    <option>Amreli</option>
+                    <option selected>Junagadh</option>
+                    <option>Surat</option>
+                    <option>Ahmedabad</option>
+                    <option>Kutchh</option>
+                    <option>Rajkot</option>
+                </select>
+                <br><br>
+                <label>Browsers : <input type="text" list = "dl">
+                    <datalist id = "dl">
+                        <option>Edge</option>
+                        <option>Chrome</option>
+                        <option>Firefox</option>
+                        <option>TOR</option>
+                    </datalist>
+                </label>
+                <br><br>
+                <label>
+                    Address :
+                    <textarea placeholder="Enter address" rows="5" cols="100"></textarea>
+                </label>
+                <br><br>
+                <input type="submit" value = "SUBMIT">
+                <input type="reset" value = "Clear">
+                <input type="button" value = "Click me">  <!-- client side button -->
+           </fieldset>
+    </form>
+</body>
+</html>
