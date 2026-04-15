@@ -1,0 +1,228 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* background-color: #1E1E1E;
+    
+    color: var(--background-light);*/
+    width: 100%;
+    background: radial-gradient(
+        circle at top left,
+        #00002b,
+        #000000 60%
+    );
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* 3. Modernizing Inputs */
+.form-control, .form-select {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.form-select option {
+    background-color: #1a1a1a; 
+    color: white;
+    padding: 10px;
+}
+
+.form-select option:hover {
+    background-color: #ffc107;
+    color: black;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: #ffc107 !important;
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+}
+/* ------------------- Navbar ------------------- */
+
+.navbar-toggler {
+    border: 1px solid #ffc107;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.custom-navbar {
+    background: #111111;
+    border-bottom: 2px solid #ffc107;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    transition: 0.4s ease;
+}
+
+/* Brand */
+.navbar-brand {
+    color: #ffc107 !important;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    text-shadow: 0 0 15px #ffc107;
+}
+
+/* Links */
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+    text-shadow: 0 0 15px #ffc107;
+}
+
+/* Active link */
+.nav-link.active {
+    color: #ffc107 !important;
+}
+
+/* Profile Icon */
+.profile-icon:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 15px #ffc107;
+}
+
+
+
+/* ------------------- Home ------------------- */
+.c1 {
+    background: #111111;
+    border-radius: 15px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.c1:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+    border: 1px solid #ffc107;
+}
+
+.c1 i {
+    font-size: 40px;
+    color: #ffc107;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.c1:hover i {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #ffc107;
+}
+
+.main-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.main-title span {
+    color: #ffc107;
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
+}
+
+
+.godash {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    border: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.godash:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffc107;
+}
+
+/* ------------------- DASHBOARD  ------------------- */
+
+.alert-card {
+    background: rgba(255, 193, 7, 0.1); /* Subtle yellow glass */
+    border-left: 5px solid #ffc107;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------- Stockin, Sell, Update ------------------- */
+
+#stockin , #salesForm, #updateForm, #deleteForm,#profile, #supplier{
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+#stockin .btn , #salesForm .btn, #updateForm .btn, #deleteForm .btn ,#profile .btn, #supplier .btn{
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+#stockin .btn:hover , #salesForm .btn:hover, #updateForm .btn:hover, #deleteForm .btn:hover, #profile .btn:hover,  #supplier .btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
+}
+
+
+/* ------------------- Supplier table ------------------- */
+.table {
+    border-radius: 15px;
+}
+
+#shead tr>th {
+    color: var(--primary-color);
+    border: none
+}
+
+#sbody tr>td {
+    background-color: rgb(46, 46, 46);
+    color: rgb(230, 230, 230);
+    border: none
+}
+
+#product>option {
+    background-color: #1E1E1E;
+}

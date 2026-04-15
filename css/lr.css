@@ -1,0 +1,48 @@
+body {
+    /* Your White, Teal, and Navy Gradient */
+    /* background-color: #000; */
+    background-image: url("../img/Login_img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapse {
+
+    display: contents !important;
+}
+
+.lr_card {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    /* width: 30%; */
+    padding: 50px;
+}
+
+ul {
+    color: #FFFFFF;
+}
+
+.form-control{
+    background-color: #333333;
+    border-color: #FFD700;
+    border: none;
+    color: #FFFFFF;
+}
+
+.form-control:focus{
+    
+    background-color: rgb(255, 254, 237);
+    color: black;
+}
+
+.plh::placeholder{
+    color: rgb(170, 170, 170);
+}
