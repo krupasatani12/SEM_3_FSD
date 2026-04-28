@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <p class="section-text" onchange="abc(event)">A brief introduction.</p>
+    <p class="section-text" onchange="abc(event)">The main body.</p>
+    <p class="section-text" onchange="abc(event)">A concluding summary.</p>
+
+    <script>
+        function abc(e)
+        {
+            var j = 1;
+            while(j<=3)
+            {
+                a = document.getElementsByClassName("section-text");
+                document.write(j + ". " + a.value);
+                j++;
+            }
+        }
+    </script>
+</body>
+</html>

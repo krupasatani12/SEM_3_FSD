@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript" type="text/javascript">
+        //------------------------function-----------------------------
+
+        //case:1(Implicit)
+        /**function fun(){
+            document.writeln("hello user")
+        }
+        //case:2(Explicit)
+        function  add(a,b){
+            return a+b
+        }
+        let result=add(5,10)
+        document.writeln(result)
+        //case:3(self invoke/automattically execute/anonymus fun)
+        (function (){
+            document.writeln("self invoke")
+        })()
+        //case:4(passing parameters-using fun)
+        function fun(first,last){
+            document.writeln("hello"+" "+first+" "+last)
+        }
+                        //onclick='fun("abc","xyz")'
+                        //onclick="fun('abc','xyz')"  
+        //case:5(Assigning a function to a variable)
+        var a=function f1(x,y){
+            return x+y
+        }
+        let result=a(5,10)
+        document.writeln(result)
+        //case:6(one function calling another function)
+        function info(first,last){
+            var full=first+last
+            return full
+        }
+        function hello(){
+            var result=info('abc','xyz')
+            document.writeln(result)  
+        }*/
+
+        //------------------------function(aqumascript)-----------------------------
+        //case:1(fat-arrow(ES6)function with multiple parameter)
+        /**const add=(a,b)=>a+b
+        console.log(add(3,5))
+        //case:2(fat-arrow(ES6)function with one parameter)
+        const m1=(x)=>x*x
+        console.log(m1(5))
+        const m11=x=>x*x
+        console.log(m1(5))
+        //case:3(fat-arrow function )
+        const h1=()=>"hello"
+        console.log(h1())
+        //case:4(block body)
+        const m12=(a,b)=>{
+            const result=a*b
+            return result
+        }
+        console.log(m12(5,2))
+        //js :" "/' '
+        //modern js: ` `
+        //EX-1
+        const newfun=(p)=>`val ${p}`
+        console.log(newfun(30))
+        //EX-2
+        const fun1=(val)=>"hello "+val
+        console.log(fun1('world'))*/
+        //---------------------------Uderstading concept---------------------------
+        //case:1 (with{},without return)
+        const add = (j, k) => {
+            ans = `${j+k}`
+        }
+        console.log("ans=" + add(8, 9)) //undefined
+
+        //case:2 (without{},with return)
+        const add1 = (j, k) =>
+            ans = `${j+k}`
+        console.log("ans=" + add1(8, 9))
+
+        //case:3 (with{},with return)
+        const add2 = (j, k) => {
+            return ans = `${j+k}`
+        }
+        console.log("ans=" + add2(8, 9))
+
+        //---------------------------Template literals---------------------------
+
+        //JS
+        //1)normal string
+        /**let m1="hello"
+        console.log(m1)
+        //2)varible interpolation
+        let a1="abc"
+        let a2="hello"+a1+"!"
+        console.log(a2)
+        //4)multiline string
+        let t1="hello\n hi\n how are you?"
+        console.log(t1)
+        //5)HTML content
+        let a11="<dir>"+"<h1>hello title</h1>"+"<p>text</p>"+"</div>"
+        document.writeln(a1)
+
+        //ES6
+        //1)ES6 string
+        let e1=`hello`
+        console.log(e1)
+        //2)
+        let a01="abc"
+        let a02=`hello ${a01}`
+        console.log(a02)
+        //3)using Expression 
+        let a=5
+        let b=6
+        result=`ans is ${a+b}`
+        console.log(result)
+        //4)
+        let t11=`hello
+                 hi
+                 how are you?`
+        console.log(t11)
+        //5)
+        let aa=`<dir>
+        <h1>hello title</h1>
+        <p>text</p>
+        </div>`
+        document.writeln(aa)*/
+
+        //--------------------------popup boxes---------------------------
+
+        //1)alert
+        function fun() {
+            alert("welcome user")
+        }
+        //2)confirm
+        function fun1() {
+            res = confirm("do you want to continue?")
+            if (res == true) {
+                document.writeln("user wants")
+                return false
+            } else {
+                document.writeln("user does not wants")
+                return false
+            }
+        }
+        //3)promt
+        function fun2() {
+            var ress = prompt("enter your name", "enter your name here")
+            document.writeln("you entered:" + ress)
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="fun1()">OK</button>
+
+</body>
+
+</html>

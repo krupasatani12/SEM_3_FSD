@@ -1,0 +1,47 @@
+<!--create a form (onsubmit compulasory) with three fields product,price and discount.also add a save button 
+1.when user clicks save store the entered value into local storage 
+2.after saving display a masg data saving local storage 
+3.add another button remove discount that removes only the discount field from the local storage
+4.after removal display the remaining data in the console.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saveproduct() {
+            u1 = document.getElementById("product").value
+            localStorage.setItem("product", u1)
+            u2 = document.getElementById("price").value
+            localStorage.setItem("price", u2)
+            u3 = document.getElementById("discount").value
+            localStorage.setItem("discount", u3)
+            alert("data saving local storage")
+            console.log(u1)
+            console.log(u2)
+            console.log(u3)
+        }
+
+        function discount() {
+            localStorage.removeItem("discount")
+            document.getElementById("remove").innerHTML = "clear"
+
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="fun()">
+        product:<input type="text" id="product"> price:
+        <input type="text" id="price"> discount:
+        <input type="text" id="discount">
+        <button onclick="saveproduct()">Save</button>
+    </form>
+    <button onclick="discount()">remove discount</button>
+    <p id="remove"></p>
+
+</body>
+
+</html>

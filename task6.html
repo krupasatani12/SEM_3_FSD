@@ -1,0 +1,25 @@
+<!--create a small html page where take 2 fields in session storage 
+1.username="lj",email="lj@example.com" retrive and display the stored username in the console remove only the email field from session storage then print the remaining data in the console"-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        sessionStorage.setItem("username","lj")
+        sessionStorage.setItem("email","lj@example.com")
+        u1=sessionStorage.getItem("username")
+        e1=sessionStorage.getItem("email")
+        console.log(u1)
+        console.log(e1)
+        sessionStorage.removeItem("email")
+        console.log(u1)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

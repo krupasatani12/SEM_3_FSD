@@ -1,0 +1,32 @@
+<!--form-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            obj=document.f1.t1.value
+            obj1=document.f1.p1.value
+            obj2=document.f1.cp1.value
+            obj3=document.f1.n1.value
+            obj4=document.f1.a.value
+            alert("username:"+obj+"\npassword:"+obj1+"\nconfirm password:"+obj2+"\ngender:"+obj3+"\naddress:"+obj4)
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="fun()"name="f1">
+        Username:<input type="text"name="t1"/><br>
+        password:<input type="password"name="p1"/><br>
+        confirm password:<input type="password"name="cp1"/><br>
+        gender:<input type="radio"value="male"name="n1">male:
+                <input type="radio"value="female"name="n1">female:<br>
+        Address:<input type="textarea"name="a"/><br>
+        <input type="submit"value="submit"/>
+        <input type="reset"value="reset"/>
+
+    </form>
+</body>
+</html>

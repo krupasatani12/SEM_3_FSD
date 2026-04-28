@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript" type="text/javascript">
+        /**const person={fname:"abc",lname:"xyz"}
+                        document.writeln(person.fname)     //dot method
+                        document.writeln(person["lname"])  //square method
+                        const f1=["apple","orange"]
+                        let length=f1.length
+                        console.log(f1[0])
+                        console.log(length)
+                        console.log(f1[f1.length-1])  //last element
+
+                //-------------condition-----------------
+
+                        //if
+                        let a1=true
+                        if(a1){
+                            document.writeln("welcome a1")
+                        }
+                        //if else
+                        let age=16
+                        if(age>=18){
+                            document.writeln("allowed")
+                        }
+                        else{
+                            document.write("not allowed")
+                        }
+                        //else if
+                        let s1=82
+                        if(s1>=90){
+                            console.log("grade A")
+                        }
+                        else if(s1>=75){
+                            console.log("grade B")
+                        }
+                        else{
+                            console.log("grade C")
+                        }
+                        //switch
+                        let r1="admin"
+                        switch(r1){
+                            case "admin":
+                                console.log("full access")
+                                break;
+                            case "editor":
+                                console.log("edit access")
+                                break;
+                            case "viewer":
+                                console.log("Read only")
+                                break;
+                            default:console.log("no access")
+                        }
+                        //ternary
+                        let agee=20
+                        let r11=age>=18?"adult":"minor"
+                        console.log(r11)
+
+                //------------loops-------------
+
+                        //for loop (1 to 5)
+                        for(let i=1;i<=5;i++){
+                            console.log(i)
+                        }
+                            
+                        //while loop (1 to 5)
+                        let i1=1
+                        while(i1<=5){
+                            document.writeln(i1)
+                            i1++
+                        }
+                        //do while (only 6)
+                        let i2=6
+                        do{
+                            document.writeln(i2)
+                            i2++
+                        }while(i2<=5)
+                        //for of loop (best for array,string)
+                        let ff1=["apple","orange"]
+                        for(let ff2 of ff1){
+                            console.log(ff2)
+                        }
+                        //for in (with array)
+                        let s2=["abc","xyz","pqr"]
+                        for(let i in s2){
+                            console.log(i)         //index
+                            console.log(s2[i])     //value
+                        }
+                        //for in (with object)
+                        let u1={fname:"a",lname:"b",age:25}
+                        for(let key in u1){
+                            console.log(key+":"+u1[key])
+                        }*/
+        //------------------array method-----------------------------------------------
+        //push()
+        /**let f1=["apple","orange"]
+        f1.push("mango")
+        console.log(f1)
+        //pop()
+        let n1=[10,20,30]
+        let r1=n1.pop()
+        console.log(n1)
+        console.log(r1)
+        //map()
+        let n2=[1,2,3,4]
+        let s1=n2.map(n=>n*n) //fat arrow
+        console.log(s1)
+        console.log(n2)
+        //filter()
+        let age=[12,18,25,14]
+        let a1=age.filter(a2=>a2>=18)
+        console.log(a1)
+        //forEach()
+        let name=["a","b","c"]
+        name.forEach(n1=>{console.log("welcome "+n1)})
+        //includes()
+        let c1=["red","green"]
+        console.log(c1.includes("red"))
+        console.log(c1.includes("pink"))
+        //find()
+        let u11=[{id:1,name:"a"},{id:2,name:"b"},{id:3,name:"c"}] //array of objects
+        let u22=u11.find(u=>u.id===2) //(typecast pn kare ===)
+        console.log(u22)*/
+
+        //------------------------Operators-----------------------------
+        let a = 5
+        console.log(a) //6
+        let b = ++a
+        console.log(b) //6
+
+        let a1 = 5
+        console.log(a1) //6
+        let b1 = a1++
+            console.log(b1) //5
+
+        let a2 = 5
+        console.log(a2) //4
+        let b2 = --a
+        console.log(b2) //4
+
+        let a3 = 5
+        console.log(a3) //4
+        let b3 = a--
+            console.log(b3) //5
+
+        var x = 3
+        var y = x++
+            var z = ++x
+        document.writeln(x, y, z) //535
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

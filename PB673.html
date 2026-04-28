@@ -1,0 +1,32 @@
+<!--Write a function that returns a Promise which resolves a number after 1 second. 
+Use a loop with async/await to get values from 1 to 3. 
+Print the doubled result of each value. -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        /* Function that returns a Promise 
+                   Resolves the given number after 1 second */
+        function getNumber(num) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(num);
+                }, 1000);
+            });
+        }
+
+        /* Async function using loop and await */
+        async function processNumbers() {
+            for (let i = 1; i <= 3; i++) {
+                let value = await getNumber(i); // wait for promise 
+                console.log(value * 2); // print doubled value 
+            }
+        }
+
+        processNumbers();
+    </script>
+</body>
+
+</html>

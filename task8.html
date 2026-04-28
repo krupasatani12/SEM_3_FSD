@@ -1,0 +1,39 @@
+<!--create a form with 3 fields fname , lname and roll no. also add a save button when the user click save stored the entered values into session storage after the saving display a msg in alert box save the session.add another button remove roll no field only the roll no field from session storage also print remaining data in the console-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function save(){
+            u1=document.getElementById("fname").value
+            sessionStorage.setItem("fname",u1)
+            u2=document.getElementById("lname").value
+            sessionStorage.setItem("lname",u2)
+            u3=document.getElementById("roll no").value
+            sessionStorage.setItem("roll no",u3)
+            alert("ave the session")
+        }
+        function removeroll(){
+            sessionStorage.removeItem("roll no") 
+            document.getElementById("remove").innerHTML="clear"
+            u1=document.getElementById("fname").value
+            u2=document.getElementById("lname").value
+            console.log(u1)
+            console.log(u2) 
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="fun()">
+        fname:<input type="text"id="fname">
+        lname:<input type="text"id="lname">
+        roll no:<input type="text"id="roll no">
+        <button onclick="save()">Save</button>
+    </form>
+    <button onclick="removeroll()">remove roll no</button>
+    <p id="remove"></p>
+
+</body>
+</html>

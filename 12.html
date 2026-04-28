@@ -1,0 +1,51 @@
+<!--LOCAL STORAGE & SESSION STORAGE-->
+<!--Save Storage
+    1)setItem("key","value")-->
+<!--Retrive Storage
+    2)getItem("key")-->
+<!--Remove Storage
+    3)removeItem("key")-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**localStorage.setItem("username","abc")
+        u1=localStorage.getItem("username")
+        console.log(u1)
+        //localStorage.removeItem("username") //one item
+        localStorage.setItem("username","abcd")
+        //localStorage.clear()  //all item
+        sessionStorage.setItem("cart","3 item")
+        let c1=sessionStorage.getItem("cart")
+        console.log(c1)
+        //sessionStorage.removeItem("cart")
+        //sessionStorage.clear()*/
+        function saveuser(){
+            u1=document.getElementById("t1").value
+            localStorage.setItem("t1",u1)
+            sessionStorage.setItem("t1",u1)
+        }
+        function showuser(){
+            let a1=localStorage.getItem("t1")
+            let b1=sessionStorage.getItem("t1")
+            document.getElementById("output").innerHTML="Local"+"Session"+b1
+        }
+        function clearuser(){
+            localStorage.clear()
+            sessionStorage.clear()
+            document.getElementById("output").innerHTML="clear"
+        }
+
+    </script>
+</head>
+<body>
+    username:<input type="text"id="t1"/>
+    <button onclick="saveuser()">Save</button>
+    <button onclick="showuser()">Show</button>
+    <button onclick="clearuser()">Clear</button>
+    <p id="output"></p>
+</body>
+</html>

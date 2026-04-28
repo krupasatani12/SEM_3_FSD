@@ -1,0 +1,39 @@
+<!--Prompt the user to enter 3 numbers (you can use prompt() in browser ). 
+For each number, return a Promise that resolves after 1 second. 
+Print the triple of each entered number.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Function that returns a Promise 
+                                   Resolves the number after 1 second */
+        function processNumber(num) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(num * 3); // triple the number 
+                }, 1000);
+            });
+        }
+        /* Async function to handle user input */
+        async function getUserNumbers() {
+            for (let i = 1; i <= 3; i++) {
+                let input = prompt("Enter number " + i + ":");
+                let number = Number(input);
+
+                let result = await processNumber(number); // wait 1 second 
+                console.log("Triple:", result);
+            }
+        }
+        getUserNumbers();
+    </script>
+
+</body>
+
+</html>

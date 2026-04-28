@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Event Object
+
+        //1)event.target.value
+        function show(e){
+            alert(e.target.value)
+        }
+        /**<select onchange="show(event)">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+        </select>*/
+        
+        //2)event.key
+        function show1(e1){
+            alert(e1.key)
+        }
+        //3)event.keyCode
+        function show2(e2){
+            alert(e2.keyCode)
+        }
+        //4)event.type
+        function show3(e3){
+            alert(e3.type)
+        }
+        //5)event.preventDefault()
+        function show4(e4){
+            e4.preventDefault()
+            alert("stop")
+        }
+
+
+        //js to check which mouse button is click (l,r,m)
+        function f1(e){
+            val=e.button
+            switch(val){
+                case 0:alert("left")
+                break;
+                case 1:alert("right")
+                break;
+                case 2:alert("middle")
+                break;
+            }
+        }
+    </script>
+</head>
+<body onkeypress="show1(e1)">
+    <button onclick="show3(e3)">CLICK</button>
+    <form onsubmit="show4(e4)">
+        <input type="submit"value="submit"/>
+    </form>
+    <div style="width:50%;height:50%;background-color: red;"onmousedown="f1(event)"></div>
+</body>
+</html>

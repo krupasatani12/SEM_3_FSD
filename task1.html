@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        querySelector(".c1")
+        function fun(){
+            var x=document.getElementsByClassName("c1")
+            for(var i=0;i < x.length;i++){
+                x[i].innerHTML=" changed all"
+                x[i].style.color="red"
+                x[i].style.backgroundColor="blue"
+            }   
+        }
+    </script>
+</head>
+<body>
+    <h1 class="c1">H1 tag</h1>
+    <p class="c1">P tag</p>
+    <pre class="c1">PRE tag</pre>
+    <button onclick="fun()"type="button">CLICK ME</button>
+</body>
+</html>

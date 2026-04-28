@@ -1,0 +1,40 @@
+<!--write js to handle following mouse events 
+1.if mouse is over heading should turn yellow color if mouse goes out than it should turn blue color.
+2.if button named red is Clicked than background should turn black and button named greeen is clicked the background color should turn green.
+3.if find time button is click than show current date and time.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function f1(id){
+            id.innerHTML="Hello"
+            id.style.color="yellow"
+        }
+        function f2(id){
+            id.innerHTML="Hello"
+            id.style.color="blue"
+        }
+        function f3(id){
+            id.style.backgroundColor="red"
+        }
+        function f4(id){
+            id.style.backgroundColor="green"
+        }
+        function fun(){
+            var d=new Date()
+            document.getElementById("p1").innerHTML=d
+        }
+    </script>
+</head>
+<body id="b1">
+    <h1 onmouseover="f1(this)" onmouseout="f2(this)"style="width:50%; height:40%;">Hello</h1>
+    <button type="button" onclick="f3(b1)">RED</button>
+    <button type="button" onclick="f4(b1)">GREEN</button>
+    <p id="p1"></p>
+    <button type="button"onclick="fun()">Find time</button>
+</body>
+</html>

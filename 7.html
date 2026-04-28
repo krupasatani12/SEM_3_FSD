@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+
+    //.html-->document-->write()-->call-->o/p
+    //DOM method (document,object,model)
+
+    //document.object()
+    //SYNTAX:document.object()
+    //1)document.write("value")
+    document.write("hello")
+
+
+    //2)document.getElementById("id")
+    /**function f1(){
+        d1.innerHTML="change"
+    }*/
+    //<p id="d1">HELLO</p>
+    
+    function f1(){
+        document.getElementById("d1").innerHTML="change"
+    }
+
+
+    //3)document.getElementsByClassName("class")
+    /**function f2(){
+        var x=document.getElementsByClassName("a1")
+        x[0].innerHTML="hello change"  //only first paragraph
+    }*/
+    //<p class="a1">Hii</p>
+    //<p class="a1">Hii123</p>
+    function f2(){
+        var x=document.getElementsByClassName("a1")
+        for (var i=0;i<x.length;i++){
+            x[i].innerHTML="hello change"
+        }
+    }
+
+
+    //4)query.Selector("selectors")
+    //<p>Hello</p>
+    //<p>Hii</p>
+    querySelector("p")  //element
+    querySelector(".c1")//class
+    querySelector("#p1")//id
+    function f3(){
+        document.querySelector("p").style.color="red"
+    }
+
+
+    //5)query.SelectorAll("selectors")
+    /**function f4(){
+        var x=document.querySelectorAll("p")
+        x[0].innerHTML="change"
+    }*/
+    //for loop(js)
+    function f4(){
+        var x=document.querySelectorAll("p")
+        for(var i=0;i<x.length;i++){
+            x[i].innerHTML="change"
+        }
+    }
+    //for loop(ES6)
+    /*function f4(){
+        for(let p of document.querySelectorAll("p")){
+            p.style.color="red"
+        }
+    }*/
+    //<p>para1</p>
+    //<p>para2</p>
+
+
+    //6)setAttribute("name","value")
+    function f5(){
+        document.getElementById("images").setAttribute("src","images.jpeg")
+    }
+    //<img id="images"/>
+
+
+    //7)getAttribute("name") //Read attribute value
+    function f6(){
+        alert(document.getElementById("p1").getAttribute("title"))
+    }
+    //<p id="p1" title="demo text">Hello</p>
+
+
+    //8)removeAttribute("name") //remove attribute value-->o/p:undefined
+    function f7(){
+        alert(document.getElementById("p2").removeAttribute("title"))
+    }
+    //<p id="p2" title="demo">Hello</p>
+    
+
+    //9)innerHTML() //Allows html tags
+    function f8(){
+        document.getElementById("p1").innerHTML="<b>Hello</b>"
+    }
+    //<p id="p1"></p>
+    
+
+    //10)innerText() //Ignore html tags
+    function f9(){
+        document.getElementById("p2").innerText="<b>Hello</b>"
+    }
+    //<p id="p2"></p>
+
+
+    //11)StyleManipulation()
+    function f10(){
+        document.getElementById("d1").style.color="red"
+    }
+
+    
+
+    </script>
+</head>
+<body>
+    <p id="d1">Helloo</p>
+    <button onclick="f10()" type="button">CLICK ME</button>
+
+
+</body>
+</html>

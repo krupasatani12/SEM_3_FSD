@@ -1,0 +1,27 @@
+<!--write js to handle following key events 
+1.give keyCode for the key press 
+2.script should give message vowel is pressed on pressing vowel key
+3.background color should turn to red after releasing the preesed key-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+        function fun(e){
+            let c=e.key
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+                alert("vowel")
+            }
+            else{
+                alert("vowel is not press")
+            }
+
+        }
+    </script>
+</head>
+<body onkeypress="fun(event)">
+    
+</body>
+</html>

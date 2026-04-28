@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**SYNTAX:
+                    function functionname(para1,para2,....,paraN=value){  //rear right side
+                        //code
+                    }*/
+        function m1(a, b) {
+            return a * b
+        }
+        let n1 = m1(5)
+        console.log(n1) //NaN (not a number)
+        let n2 = m1(5, 8)
+        console.log(n2)
+        document.writeln(n2)
+
+
+        function m2(a, b = 2) { //default para always rear right side
+            return a * b
+        }
+        let n11 = m2(3)
+        console.log(n11)
+        let n22 = m2(3, 3)
+        console.log(n22)
+
+
+        //Default parameter style Manipulation (most imp=5 mark)
+        function fun(cl, bg = "blue") {
+            d1.style.color = cl
+            d1.style.backgroundColor = bg //always in camal case
+        }
+
+
+        //TASk:default parameter + Style manipulation
+        function task(cl, bc, fs = "50", fos = "Italic") { //default para always rear right side
+            a1.style.color = cl
+            a1.style.backgroundColor = bc
+            a1.style.fontSize = fs
+            a1.style.fontStyle = fos
+        }
+
+
+        //Rest parameter:collects values
+        /**SYNTAX:
+        function functionname(...parameters){
+            //code
+        }*/
+        function fun1(a, b) {
+            console.log(a)
+            console.log(b)
+        }
+        fun1(1, 2, 3, 4)
+
+        function fun2(a, b, ...c) {
+            console.log(a)
+            console.log(b)
+            console.log(c)
+
+        }
+        fun1(1, 2, 3, 4)
+
+        function f1(a, b, ...c) {
+            console.log(`${a}${b}`)
+            console.log(c)
+            console.log(c[0])
+            console.log(c.length)
+            console.log(c.indexOf('pqr'))
+            console.log(c.indexOf('abc'))
+        }
+        f1('abc', 'xyz', 'pqr', 'def', 'mnp')
+
+        //Spread operator/parameter:expands value
+        //NOTE:both are represented as (...args)[Triple dot]
+
+        arr1 = [10, 42, 35]
+        arr2 = [14, 56]
+        let arr3 = [arr1, arr2]
+        console.log(arr3)
+
+        let arr = [...arr1, ...arr2]
+        console.log(...arr)
+        console.log(Math.min(arr))
+        console.log(Math.min(...arr))
+        console.log(`sorted: ${arr.sort()}`)
+    </script>
+</head>
+
+<body>
+    <p id="a1">Hello LJKU</p>
+    <button onclick="task('red','green')" type="button">Click Me</button>
+
+</body>
+
+</html>

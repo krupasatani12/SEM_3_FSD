@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PB 564</title>
+    <script>
+        function registerUser()
+        {
+            while(true)
+            {
+                let name = prompt("Enter your name");
+                if (name === " " || name === undefined)
+                {
+                  return false;
+                  break;  
+                }
+                else{
+                    return true;
+                    while(true)
+                    {
+                        let password = prompt("Enter password");
+                        if (password.length != 8 )
+                        {
+                            return false;
+                            break;
+                        }
+                        else{
+                            let choice = confirm("Are you sure you want to confirm with this username and password");
+                            if (choice == "cancel")
+                            {
+                                alert("Registration cancel");
+                            }
+                            else{
+                                alert("Registration Successfull.")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick = registerUser() value="Register">
+</body>
+</html>

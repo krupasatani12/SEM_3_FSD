@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1]:MOUSE EVENT
+
+        //1)onclick
+        function fun1(id) {
+            id.innerHTML = "Done"
+        }
+        //<h1 onclick="fun1(this)">Heloo</h1>
+
+
+        //2)onmouseover  //3)onmouseout
+        function fun2(id) {
+            id.innerHTML = "mouseover"
+        }
+
+        function fun3(id) {
+            id.innerHTML = "mouseout"
+        }
+        //<div onmouseover="fun2(this)" onmouseout="fun3(this)"style="width:50%; height:40%;background-color:red">Heloo</div>
+
+        //4)onmouseup  //onmousedown
+        function f1(id) {
+            id.innerHTML = "Clicked"
+            id.style.backgroundColor = "red"
+        }
+
+        function f2(id) {
+            id.innerHTML = "Release"
+            id.style.backgroundColor = "blue"
+        }
+        //<div onmousedown="f1(this)" onmouseup="f2(this)"style="width:40%; height:50%;background-color:pink">Heloo</div>
+
+        //2]:FORM EVENT
+
+        //1)onchange   //2)onfocus
+        function upper(id) {
+            id.value = id.value.toUpperCase()
+        }
+        //<input type="text" onchange="upper(this)" value="hello"/>
+        //<input type="text" onfocus="this.style.backgroundColor='yellow'"/>
+
+        //3)onblur //4)oninput
+        function f1(id) {
+            id.value = id.value.toLowerCase()
+        }
+        //<input type="text" value="HELLO"onblur="f1(this)"/>
+        //<input type="text"oninput="this.value=this.value.toUpperCase()"/>
+
+        //5)onsubmit
+        function fun() {
+            obj = document.f1.t1.value
+            alert(obj)
+        }
+        /**<form onsubmit="fun()"name="f1">
+        Username:<input type="text"name="t1"/>
+        <input type="submit"value="submit"/>
+        </form>*/
+
+        //3]:KEYBOARD EVENT
+
+        //1)onkeydown  //onkeyup
+        function fun(id) {
+            id.bgColor = "red"
+        }
+
+        function fun1(id) {
+            id.bgColor = "blue"
+        }
+
+        //3)onkeypress
+        function fun3(e) {
+            alert(e.keyCode)
+        }
+    </script>
+</head>
+
+<body onkeyup="fun(this)" onkeydown="fun1(this)" onkeypress="fun3(event)">
+
+</body>
+
+</html>

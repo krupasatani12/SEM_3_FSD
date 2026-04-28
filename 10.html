@@ -1,0 +1,40 @@
+<!--Why to access <form>data-->
+<!--
+    1)square method:
+    document,forms['formname']["elementname"].value
+        or
+    2)Dot method:
+    document.formname.elementname.value
+        or
+    3)DOM method:
+    document.getElementById("idname").value
+-->
+<!--TASK::6-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            //obj=document.f1.t1.value
+            //obj=document.forms["f1"]["t1"].value
+            obj=document.getElementById("i1").value
+            if(obj){
+                alert("welcome "+obj)
+            }
+            else{
+                alert("Enter somthing")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return fun()"name="f1">
+    User:<input type="text"name="t1"id="i1"/>
+    <input type="submit"value="submit"/>
+    <input type="reset"value="reset"/>
+    </form>
+</body>
+</html>

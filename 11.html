@@ -1,0 +1,89 @@
+<!--IMP for 5 MARKS
+::REGULAR EXPRESSION:
+Syntax:
+/pattern/modifiers
+how to test RE
+using test()method
+RegExObj.test("String")
+-->
+<!--TASK::7
+write a js to validate user name and password ,password length must be of 6 to 12 characters for user name field it should not start with _,@, and any numbers also check both must be not blank.-->
+<!--TASK::8
+write a html form accepting an integer having 4 digit. input should not accept char of letters and special symbols-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //function fun(){
+            //pat=/abc/
+            //pat=/abc/i         //(i:case insensitive(modifier))
+            //pat=/[abc]/        //(a or b or c :any of char in string)
+            //pat=/[^abc]/       //(apart from abc :not abc)
+            //pat=/[0-9]/        //(include digit) /\d/
+            //pat=/[^0-9]/       //(not only digit)/\D/
+            //pat=/(x|y)/        //(x or y)
+            //pat=/^A/           //(must start with A)
+            //pat=/BO*/          //(zero or more but must contain B)
+            //pat=/t$/           //(must end with t)
+            //pat=/\w/:[A_Z a-z 0-9] //(word char)
+            //pat=/\W/:[^A_Z a-z 0-9] //(non-word char)
+            //pat=/^[A-Z a-z]+$/  (+:zero or more)
+            /**pat=/^\d{10}$/       //or:/^[0-9]{10}$ //(must contain only 10 digit)
+            u=document.getElementById("t1").value 
+            if(pat.test(u)){
+                alert("String matched")
+            }else{
+                alert("not matched")
+            }*/
+        //}
+        /**function fun(){
+            pat=/^_|^@|^\d/
+            user=document.getElementById("t1").value
+            pass=document.getElementById("t2").value
+            if(user.length==0 || pass.length==0){
+                alert("both is empty")
+            } 
+           
+            else if(pat.test(user)){
+                alert("Invalid input")
+            }
+            else if(pass.lenght<6 || pass.lenght>12){
+                alert("must be 6 to 12 character")
+            }
+            else{
+                alert("welcome "+user)
+            }
+            
+        }
+        User:<input type="text" name="t1"/>
+        password:<input type="password" name="t2"/>
+        <input type="submit" value="submit" onclick="fun()"/>
+        <input type="reset" value="reset"/>*/
+        function fun(){
+            pat=/^\d{4}$/       
+            u=document.getElementById("t1").value 
+            if(pat.test(u)){
+                alert("String matched")
+            }
+            else{
+                alert("not matched")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return fun()"name="f1">
+        input:<input type="text"name="t1"id="i1"/>
+        <input type="submit"value="submit"/>
+        <input type="reset"value="reset"/>
+    </form>
+    
+        
+    
+</body>
+</html>
